@@ -2,10 +2,18 @@ import rotatingBrain from '../../img/ClickHereBrain.gif';
 import gamebutton from '../../img/verte.png';
 import reflexGameButton from '../../img/ReflexGame.gif';
 import fastClick from '../../img/FastClickGame.gif';
+import Navigate from "../Router/Navigate";
 /* import { isAuthenticated } from '../../utils/auths'; */
 
+const HomePage = () => {
+    renderPage();
+    onClickGames();
+};
 
-const homePage = `
+function renderPage() {
+    const main = document.querySelector('main');
+
+    const homePage = `
   
     <div class="row align-items-center homePageContent">
         <div class="col-md align-self-end float-lg-start text-component">   
@@ -13,13 +21,13 @@ const homePage = `
             <p>Here you can try to improve your brain level and discover his potential.</p>
         </div>
         <div class="col-sm-3 gameButtons">
-            <div id=firstGame>
+            <div id=firstGame data-uri="/reflexPage">
             </div>
-            <div id=secondGame>
+            <div id=secondGame data-uri="/reflexPage">
             </div>
-            <div id=thirdGame>
+            <div id=thirdGame data-uri="#">
             </div>
-            <div id=lastGame>
+            <div id=lastGame data-uri="/fastClick">
             </div>
         </div>
         <div class="col-md d-flex justify-content-center">
@@ -32,8 +40,6 @@ const homePage = `
 `;
 
 
-const HomePage = () => {
-    const main = document.querySelector('main');
     main.innerHTML = homePage;
     const menu = document.getElementById('brain');
     const firstGame = document.getElementById('firstGame');
@@ -45,18 +51,43 @@ const HomePage = () => {
     menu.addEventListener('click', () => {
         if (!isclicked) {
             firstGame.innerHTML += `
-                <a href="/reflexPage"><img class='topbutton'  src="${reflexGameButton}" alt="button_game" className="img-fluid" id="btnPop"></a>
+                <img class='topbutton'  src="${reflexGameButton}" alt="button_game" className="img-fluid" id="btnPop">
             `;
             secondGame.innerHTML += `
-                <a href="/reflexPage"><img class='topbutton' src="${gamebutton}" alt="button game" className="img-fluid" id="btnPop"></a>
+                <img class='topbutton' src="${gamebutton}" alt="button game" className="img-fluid" id="btnPop">
             `;
             thirdGame.innerHTML += `
-                <a href="#"><img class='dimension-button ' src="${gamebutton}" alt="button game" className="img-fluid" id="btnPop"></a>
+                <img class='dimension-button ' src="${gamebutton}" alt="button game" className="img-fluid" id="btnPop">
             `;
             lastGame.innerHTML += `
-                <a href="/fastClick"><img class='dimension-button ' src="${fastClick}" alt="button game" className="img-fluid" id="btnPop"></a>
+                <img class='dimension-button ' src="${fastClick}" alt="button game" className="img-fluid" id="btnPop">
             `;
             isclicked = true;
+
+            firstGame.addEventListener('click', (e) => {
+
+                e.preventDefault();
+                Navigate(firstGame.getAttribute('data-uri'));
+            });
+
+            secondGame.addEventListener('click', (e) => {
+
+                e.preventDefault();
+                Navigate(secondGame.getAttribute('data-uri'));
+            });
+
+            thirdGame.addEventListener('click', (e) => {
+
+                e.preventDefault();
+                Navigate(thirdGame.getAttribute('data-uri'));
+            });
+
+            lastGame.addEventListener('click', (e) => {
+
+                e.preventDefault();
+                Navigate(lastGame.getAttribute('data-uri'));
+            });
+
         } else {
             firstGame.innerHTML = ``;
             secondGame.innerHTML = ``;
@@ -64,11 +95,15 @@ const HomePage = () => {
             lastGame.innerHTML = ``;
             isclicked = false;
         }
-
-
     });
 
+}
 
-};
+
+
+function onClickGames(){
+
+}
+
 
 export default HomePage;

@@ -7,7 +7,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const DEVELOPMENT_API_BASE_URL = 'http://localhost:3000';
 const PRODUCTION_API_BASE_URL = 'http://web2-2022-project-group-07-bebrain.io';
 const DEVELOPMENT_PATH_PREFIX = '/';
-const PRODUCTION_PATH_PREFIX = '/mymovies/';
+const PRODUCTION_PATH_PREFIX = '/group7-bebrain.github.io/';
 
 const buildMode = process.argv[process.argv.indexOf('--mode') + 1];
 const isProductionBuild = buildMode === 'production';

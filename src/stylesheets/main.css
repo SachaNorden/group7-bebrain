@@ -1,0 +1,272 @@
+html{
+height: 100%;
+}
+body {
+    background: url("../img/stars2.gif"), linear-gradient(to bottom right, black,rgb(1, 1, 45),rgb(3, 3, 102),rgb(1, 1, 45),black);
+    /* background: url("../img/stars2.gif"), radial-gradient(farthest-side at 80% 85%, rgb(3, 3, 102),rgb(3, 3, 65),black); */
+    height: 100%;
+    color: #7894E1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+}
+.dimension-button {
+    width: 4em;
+    height: 3em;
+    margin: auto;
+}
+.topbutton {
+    width: 4em;
+    height: 3em;
+    margin: auto;
+}
+
+.nav-link {
+    margin-left: 5em;
+    margin-top: 1em;
+    color: #7894E1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7em;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+.nav-link:hover {
+    border-radius:70%;
+    border-bottom: 0.1em solid #7894E1;
+    border-left: 0.03em solid #7894E1;
+    border-right: 0.03em solid #7894E1;
+    color:#b3bfe1 !important;
+}
+.nav-link:visited{
+    color: #7894E1;
+}
+
+.nav-link:focus {
+    color: #7894E1;
+}
+
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 2em;
+    margin-top: 0.8em;
+    color: #7894E1;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 10;
+}
+
+.navbar-brand:hover {
+    border-radius:50%;
+    border-bottom: 0.1em solid #7894E1;
+    border-left: 0.03em solid #7894E1;
+    border-right: 0.03em solid #7894E1;
+    color:#b3bfe1!important;
+}
+
+.navdown{
+    background-color: #7894E1;
+}
+
+.navbar-toggler{
+    background-color: rgba(120, 148, 225,0.8);
+    border-radius: 0.5em;
+    border-color:rgba(120, 148, 225,0.9);
+    z-index: 10;
+}
+
+.navbar-toggler:hover{
+    background-color: rgba(120, 148, 225,0.5);
+    border-radius: 0.5em;
+    border-color:rgba(120, 148, 225,0.7);
+}
+
+.text-component {
+    width:100%;
+	-webkit-background-clip: text;
+	color: transparent;
+	background-image: url('../img/giph3.gif');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+.homePageContent{
+    padding-top: 10%;
+    margin: auto;
+}
+.gameButtons{
+    text-align: right;
+}
+#firstGame{
+    margin-right:-0.8em;
+    padding-bottom: 0.5em;
+}
+#secondGame{
+    margin-right: 0.7em;
+    padding-bottom: 0.5em;
+}
+#thirdGame{
+    margin-right:0.5em;
+    padding-bottom: 0.5em;
+}
+#lastGame{
+    margin-right: -0.8em;
+}
+/* brainstorming gif */
+.gif {
+    /*let to 32% thanks to that there is no scroll bar*/
+    /* max-width: 50%; */
+    text-align: left;
+    padding-right: 10em;
+}
+
+#brain{
+    cursor: pointer;
+    object-position: 50% 50%;
+    display: block;
+    margin: auto;
+    width: 20em;
+}
+
+
+.imgGif {
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-top: 3em;
+    margin-top: -22%;
+    max-width: 20%;
+    transform: scaleX(-1);
+}
+
+
+.p-5 {
+    caret-color: blue;
+}
+
+/*Login*/
+.card {
+    background-color: rgba(255, 255, 255,0.7);
+}
+
+.mb-5 {
+    color: #7894E1;
+    font-weight: bolder;
+    font-size: 2em;
+    text-shadow: 0.03em 0.03em 0.05em rgba(0, 0, 0, 0.75);
+}
+
+.form-label {
+    color: #7894E1;
+    font-weight: bolder;
+    text-shadow: 0.03em 0.03em 0.05em rgba(0, 0, 0, 0.75);
+}
+
+.form-check-label {
+    color: #7894E1;
+    font-size: smaller;
+    font-weight: bolder;
+    text-shadow: 0.03em 0.03em 0.05em rgba(0, 0, 0, 0.75);
+}
+
+.btn {
+    background-color: rgb(248, 153, 58);
+    border: none;
+}
+
+.btn:hover {
+    background-color: rgba(240, 148, 56, 0.75);
+}
+
+.vh-100 {
+    padding-top: 6%;
+    z-index: 1;
+}
+
+
+/* ReflexGame */
+.reflexeGame {
+    padding-top: -1%;
+    margin-bottom: -3em;
+}
+
+
+.headerReflexion h1 {
+    font-weight: bolder;
+    font-size: 100%;
+    color: #7894E1;
+    text-align: center;
+}
+
+.navigation h2 {
+    color: rgb(59, 57, 57);
+    text-align: left;
+    font-weight: 700;
+    font-size: 85%;
+    padding-top: 1em;
+}
+
+.navigation p{
+    color: rgb(59, 57, 57);
+    text-align: left;
+    font-weight: 100;
+    font-size: 61%;
+}
+
+.navigation p span {
+    color: green;
+}
+
+.canvas-parent {
+    cursor: crosshair;
+    width: 60%;
+    height: 200px;
+    margin-left: -1.5em;
+    margin-top: -2em;
+}
+
+.section-2 {
+    width: 80%;
+    margin-top: -4em;
+    margin-left: 5em;
+    padding-right: 2em;
+    color: black;
+    font-weight: 500;
+    font-size: 34px;
+}
+
+.timeText {
+    color: black;
+    font-weight: 700;
+    font-size: 36px;
+    margin-top: 0em;
+    margin-left: 0em;
+}
+
+.textYourTime {
+    font-size: 30px;
+}
+
+.headerReflexion {
+    color: #7894E1;
+    font-weight: bolder;
+    font-size: 2em;
+    text-shadow: 0.03em 0.03em 0.05em rgba(0, 0, 0, 0.75);
+}
+
+.section-1{
+    padding-top: 0.5em;
+}
+
+.bouttonColor {
+    width: 200px;
+    margin-top: 2em;
+}
+#btnPop{
+    border-radius: 20%;
+    border-color: aqua;
+    border-width: 0.5em;
+}

@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-const DEVELOPMENT_API_BASE_URL = 'https://api-bebrain.azurewebsites.net';
-const PRODUCTION_API_BASE_URL = 'http://web2-2022-project-group-07-bebrain.io';
+const DEVELOPMENT_API_BASE_URL = '/api';
+const PRODUCTION_API_BASE_URL = 'https://api-bebrain.azurewebsites.net';
 const DEVELOPMENT_PATH_PREFIX = '/';
 const PRODUCTION_PATH_PREFIX = '/group7-bebrain.github.io/';
 
@@ -28,7 +28,7 @@ module.exports = {
       directory: path.join(__dirname, 'dist')
     },
     port: 8080,
-    host: 'https://sachanorden.github.io/group7-bebrain.github.io',
+    host: 'localhost',
     allowedHosts: 'all',
     open: true, // open the default browser
     hot: true,

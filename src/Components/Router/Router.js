@@ -1,5 +1,5 @@
 import { removePathPrefix, usePathPrefix } from '../../utils/path-prefix';
-import routes from './routes';
+import routes from './routes'
 
 const Router = () => {
   onFrontendLoad();
@@ -11,7 +11,6 @@ function onNavBarClick() {
   const navbarWrapper = document.querySelector('#navbarWrapper');
   navbarWrapper.addEventListener('click', (e) => {
     e.preventDefault();
-
     const navBarItemClicked = e.target;
     const uri = navBarItemClicked?.dataset?.uri;
     if (uri) {

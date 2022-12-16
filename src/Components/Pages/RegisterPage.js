@@ -13,7 +13,7 @@ const RegisterPage = () => {
 function renderRegisterForm() {
   const main = document.querySelector('main');
   const section = document.createElement('section');
-  section.className = 'vh-100';
+  section.className = 'section';
   
 
   const container = document.createElement('div');

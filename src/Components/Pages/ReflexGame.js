@@ -21,7 +21,7 @@ const reflexepage = () => {
 function renderReflexePage() {
     const main = document.querySelector('main');
     const section = document.createElement('section');
-    section.className = 'vh-100';
+    section.className = 'section';
     
   
     const container = document.createElement('div');

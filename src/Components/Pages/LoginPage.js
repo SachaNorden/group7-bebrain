@@ -13,15 +13,15 @@ const LoginPage = () => {
 function renderLoginForm() {
   const main = document.querySelector('main');
   const section = document.createElement('section');
-  section.className = 'vh-100';
+  section.className = 'section';
 
 
   const container = document.createElement('div');
-  container.className = 'container py-5 h-100';
+  container.className = 'container py-5';
   section.appendChild(container);
 
   const row = document.createElement('div');
-  row.className = 'row d-flex justify-content-center align-items-center h-100';
+  row.className = 'row d-flex justify-content-center align-items-center';
   container.appendChild(row);
 
   const col = document.createElement('div');

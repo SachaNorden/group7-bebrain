@@ -10,6 +10,7 @@ module.exports = {
   },
   rules: {
     'linebreak-style': 0,
+    'no-alert': 'off',
     'no-use-before-define': ['error', 'nofunc'],
   },
 };

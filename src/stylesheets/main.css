@@ -53,7 +53,7 @@ body {
 }
 
 .navbar {
-    position: fixed;
+    position:relative;
     z-index: 10;
 }
 
@@ -113,9 +113,34 @@ body {
 #lastGame{
     margin-right: -0.8em;
 }
+.homePageContent{
+    padding-top: 10%;
+    margin: auto;
+}
+.gameButtons{
+    text-align: right;
+}
+#firstGame{
+    margin-right:-0.8em;
+    padding-bottom: 0.5em;
+}
+#secondGame{
+    margin-right: 0.7em;
+    padding-bottom: 0.5em;
+}
+#thirdGame{
+    margin-right:0.5em;
+    padding-bottom: 0.5em;
+}
+#lastGame{
+    margin-right: -0.8em;
+}
 /* brainstorming gif */
 .gif {
     /*let to 32% thanks to that there is no scroll bar*/
+    /* max-width: 50%; */
+    text-align: left;
+    padding-right: 10em;
     /* max-width: 50%; */
     text-align: left;
     padding-right: 10em;
@@ -150,6 +175,10 @@ body {
 /*Login*/
 .card {
     background-color: rgba(255, 255, 255,0.7);
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .mb-5 {
@@ -182,10 +211,8 @@ body {
 }
 
 .vh-100 {
-    padding-top: 6%;
     z-index: 1;
 }
-
 
 /* ReflexGame */
 .reflexeGame {
@@ -269,4 +296,312 @@ body {
     border-radius: 20%;
     border-color: aqua;
     border-width: 0.5em;
+    border-radius: 20%;  
+    cursor: pointer;
 }
+
+
+#cardProfil {
+    margin-top: 8em;
+	color:#fff;
+    width: 350px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #9a40a9, #b74cc9);
+    box-shadow:  20px 20px 60px #913ca0, 
+                -20px -20px 60px #c552d8;
+    border: none;
+
+}
+
+
+/* MemoryGame */
+
+  .carbon {
+    background: rgba(255, 255, 255,0.7);
+    border-radius: 4px;
+    padding: 10px 30px 10px 30px;
+    width: 65%;
+    height: 85%;
+    margin: 10px auto 10px auto;
+    -webkit-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+    -webkit-box-shadow: 2px 4px 24px black;
+            box-shadow: 2px 4px 24px black;
+  }
+  
+  .tabbar {
+    height: 50px;
+    position: relative;
+    color: white;
+    padding: 1px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .tabbar > div {
+    padding-left: 10px;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    color: #ff5f56;
+    width: 100%;
+  }
+  
+  .tabbar > div > span,
+  h4 {
+    display: inline;
+  }
+  
+  h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+  }
+  
+   h4 > span {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff5f56;
+  }
+  
+  .counter {
+    color: #ffbe2e;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+  .startMemory {
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 3px;
+    background-color: #ff5f56;
+    width: 100px;
+    height: 30px;
+    top: -3px;
+    right: 15px;
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    -webkit-box-shadow: 2px 2px 2px #ff5f56;
+            box-shadow: 2px 2px 2px #ff5f56;
+    border: 1px solid rgba(0, 0, 0, 0.342);
+  }
+  
+  .startMemory:active {
+    -webkit-box-shadow: 1px 0px 1px #ff5f56;
+            box-shadow: 1px 0px 1px #ff5f56;
+    height: 32px;
+  }
+  
+  .panel {
+    background-color: rgba(255, 255, 255,0.7);
+    padding-left: 10px;
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+
+  .circle {
+    border-radius: 50%;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+  }
+
+  .circle {
+    margin-top: 15px;  
+  }
+
+  .panel__one {
+    padding-top: 3em;
+    background-color: #ff5f56;
+    font-size: 14px;
+    text-align: center;
+    color: #ff5f56;
+  }
+  .panel__two {
+    padding-top: 3em;
+    background-color: #ffbe2e;
+    font-size: 14px;
+    text-align: center;
+    color : #ffbe2e;
+  }
+  .panel__three {
+    padding-top: 3em;
+    background-color: #27c93f;
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    color : #27c93f;
+  }
+  #victory{
+    color: #7894E1;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2em;
+    text-shadow: 0.03em 0.03em 0.05em rgba(0, 0, 0, 0.75);
+  }
+  .circle:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  
+  .form {
+    background-color: rgba(255, 255, 255,0.7);
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 10px;
+    margin-bottom: 50px;
+    -webkit-box-shadow: -1px 7px 25px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 7px 25px 0px rgba(0, 0, 0, 0.75);
+  }
+  .box {
+    height: 110px;
+    width: 107px;
+    margin: 6px;
+    display: inline-block;
+    background: #22222cde;
+    border-left: 1px solid hsl(220, 100%, 50%);
+    border: 5px solid hsl(220, 100%, 50%);
+    border-radius: 20px;
+    animation: rainbow 5s infinite alternate;
+    -ms-animation: rainbow 5s infinite alternate;
+    -moz-animation: rainbow 5s infinite alternate;
+    -webkit-animation: rainbow 5s infinite alternate;
+    -webkit-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    cursor: pointer;
+    -webkit-box-shadow: 3px 4px 22px 2px black;
+            box-shadow: 3px 4px 22px 2px black;
+  }
+  
+  @keyframes rainbow {
+    0% {
+      border-color: hsla(343, 86%, 62%, 0.3);
+    }
+    100% {
+      border-color: hsla(211, 99%, 40%, 0.3);
+    }
+  }
+  
+  @-webkit-keyframes rainbow {
+    0% {
+      border-color: hsl(0, 100%, 50%, 0.3);
+    }
+    100% {
+      border-color: hsl(255, 100%, 50%, 0.3);
+    }
+  }
+  
+  .backside {
+    padding: 5px;
+    margin: 0;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    background: #ff5e56c5;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+  }
+  
+  .backside > i {
+    position: absolute;
+    font-size: 55px;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(27px, 30px);
+        -ms-transform: translate(27px, 30px);
+            transform: translate(27px, 30px);
+    color: snow; 
+  }
+  .flipped,
+  .backside {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    border: none;
+  }
+  
+  .matchingcards {
+    background: rgba(128, 128, 128, 0.788);
+    -webkit-transition: all 1s ease-in-out 1s;
+    -o-transition: all 1s ease-in-out 1s;
+    transition: all 1s ease-in-out 1s;
+  }
+  
+  .matchingcards > i {
+      color:black;
+  }
+  
+  @media screen and (max-width: 1070px) {
+   
+    .box{
+      height: 80px;
+      width: 85px;
+      margin: 5px;
+      border-width: 2px;
+      margin-top:-4px;
+    }
+    .backside > i {
+      -webkit-transform: translate(16px, 16px);
+      -ms-transform: translate(16px, 16px);
+      transform: translate(16px, 16px);
+    }
+  }
+  @media screen and (max-width: 1020px) {
+    .box{
+        height: 80px;
+        width: 75px;
+        margin: 5px;
+      font-size:5%;
+    }
+    span {
+      font-size: 14px;
+    }
+     .backside > i {
+        -webkit-transform: translate(10px, 16px);
+            -ms-transform: translate(10px, 16px);
+                transform: translate(10px, 16px);
+    }
+  }
+  @media screen and (max-width: 760px) {
+    .box{
+        height: 70px;
+        width: 68px;
+        margin: 4px;
+    }
+    
+    .backside > i {
+        -webkit-transform: translate(10px, 10px);
+            -ms-transform: translate(10px, 10px);
+                transform: translate(10px, 10px);
+    }
+    
+      .counter,.time,span {
+      font-size: 10px;
+    }
+  
+  }
+  @media screen and (max-width: 455px) {
+    .box{
+      height: 35px;
+      width: 35px;
+      margin: 8px;
+      font-size: 15px;
+    }
+  
+    .backside > i {
+    font-size: 15px;
+      color:white;
+    }
+    button{
+      font-size:7px;
+      width:33px;
+    }
+    .counter,.time {
+      font-size: 14px;
+    }
+  
+  }
+  

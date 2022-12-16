@@ -42,7 +42,7 @@ function renderNavbar() {
     const navbarAuth = `
   <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand "  data-uri="/" id="homePage" >BeBrain</a>
+    <a class="navbar-brand " id="homePage" data-uri="/">BeBrain</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

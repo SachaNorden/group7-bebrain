@@ -35,7 +35,7 @@ module.exports = {
     historyApiFallback: true, // serve index.html instead of routes leading to no specific ressource
     proxy: {
       '/api': {
-        target: 'https://api-bebrain.azurewebsites.net',
+        target: 'http://localhost:3000',
         pathRewrite: { '^/api': '' },
       },
     },

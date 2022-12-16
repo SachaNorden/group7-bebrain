@@ -26,7 +26,7 @@ function renderPage() {
             </div>
             <div id=secondGame data-uri="/memory">
             </div>
-            <div id=thirdGame data-uri="#">
+            <div id=thirdGame data-uri="/trackingGame">
             </div>
             <div id=lastGame data-uri="/fastClick">
             </div>
@@ -52,7 +52,7 @@ const homePageEmpty = `
         </div>
         <div id=secondGame data-uri="/reflexPage">
         </div>
-        <div id=thirdGame data-uri="#">
+        <div id=thirdGame data-uri="/trackingGame">
         </div>
         <div id=lastGame data-uri="/fastClick">
         </div>

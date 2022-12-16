@@ -28,7 +28,7 @@ module.exports = {
       directory: path.join(__dirname, 'dist')
     },
     port: 8080,
-    host: 'localhost',
+    host: 'https://sachanorden.github.io/group7-bebrain.github.io',
     allowedHosts: 'all',
     open: true, // open the default browser
     hot: true,

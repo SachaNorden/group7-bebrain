@@ -11,7 +11,7 @@ function onNavBarClick() {
   const navbarWrapper = document.querySelector('#navbarWrapper');
   navbarWrapper.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log("wrapper");
+
     const navBarItemClicked = e.target;
     const uri = navBarItemClicked?.dataset?.uri;
     if (uri) {

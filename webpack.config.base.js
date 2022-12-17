@@ -7,7 +7,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const DEVELOPMENT_API_BASE_URL = '/api';
 const PRODUCTION_API_BASE_URL = 'https://api-bebrain.azurewebsites.net';
 const DEVELOPMENT_PATH_PREFIX = '/';
-const PRODUCTION_PATH_PREFIX = '/group7-bebrain.github.io/';
+const PRODUCTION_PATH_PREFIX = '/sachanorden.github.io/group7-bebrain.github.io/';
 
 const buildMode = process.argv[process.argv.indexOf('--mode') + 1];
 const isProductionBuild = buildMode === 'production';

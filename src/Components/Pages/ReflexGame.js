@@ -1,4 +1,5 @@
 import { clearPage, renderPageTitle } from "../../utils/render";
+import { getAuthenticatedUser } from '../../utils/auths';
 import BouttonBleu from "../../img/button-blue.png"
 import BouttonRouge from "../../img/button-red.png"
 import BouttonVert from "../../img/verte.png"
@@ -132,6 +133,7 @@ function renderReflexePage() {
             const PlayTime = (TimeLater - TimeNow);
             const TimeText = document.getElementById('time-text');
             TimeText.innerHTML = PlayTime;
+            saveScore(PlayTime);
             EndGame();
         }
     });
@@ -186,24 +188,24 @@ function Timeout1Function(time) {
     }, time)
 }
 
-/*
-async function saveScore(e){
-    e.preventDefault();
 
-    const score = document.querySelector('#time-text').textContent;
+async function saveScore(score){
+    const user = getAuthenticatedUser();
 
     const options = {
-        method: 'POST',
+        method: 'PATCH',
         body: JSON.stringify({
-            score,
+            username: user.username,
+            scoreReflexe: score,
         }),
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': user.token,
         },
     };
 
-    const response = await fetch(`${process.env.API_BASE_URL}/auths/login`, options);
+    await fetch(`${process.env.API_BASE_URL}/userScores/scoreReflexe`, options);
 
 }
-*/
+
 export default reflexepage;

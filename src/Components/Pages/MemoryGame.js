@@ -1,5 +1,5 @@
 import { clearPage, renderPageTitle } from "../../utils/render";
-
+import { getAuthenticatedUser } from '../../utils/auths';
 
 let correctFlips = 0;
 let lastFlipped = [];
@@ -296,9 +296,28 @@ function startGame() {
 }
 
 function gameWonParty() {
+    saveScore(moves);
     const msg = document.getElementById('victory');
     msg.textContent='You Won !';
 }
 
+async function saveScore(score){
+    const user = getAuthenticatedUser();
+
+    const options = {
+        method: 'PATCH',
+        body: JSON.stringify({
+            username: user.username,
+            scoreMemory: score,
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': user.token,
+        },
+    };
+  
+    await fetch(`${process.env.API_BASE_URL}/userScores/scoreMemory`, options);
+  
+  }
 
 export default MemoryPage;

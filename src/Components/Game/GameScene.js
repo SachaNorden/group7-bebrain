@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import ScoreLabel from './ScoreLabel';
+import { getAuthenticatedUser } from '../../utils/auths';
 
 import backgroundSky from '../../img/trackingBackground.jpg';
 import bombAsset from '../../assets/bomb.png';
@@ -39,7 +40,7 @@ class GameScene extends Phaser.Scene {
     this.triggerTimer = this.time.addEvent({
       callback: this.gameFinished,
         callbackScope: this,
-        delay: 10000, // 1000 ms = 1s
+        delay: 20000, // 1000 ms = 1s
         loop: false
     });
 
@@ -65,7 +66,7 @@ class GameScene extends Phaser.Scene {
     this.gameOverTextRestart.visible = true;
     this.input.on('pointerdown', () => this.scene.start('StartGame'));
     const score =this.scoreLabel.getScore();
-    console.log(score);
+    saveScore(score);
   }
 
   update() {
@@ -84,6 +85,25 @@ class GameScene extends Phaser.Scene {
       }
     }
   }
+
+}
+
+async function saveScore(score){
+  const user = getAuthenticatedUser();
+
+  const options = {
+      method: 'PATCH',
+      body: JSON.stringify({
+          username: user.username,
+          scoreTracking: score,
+      }),
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': user.token,
+      },
+  };
+
+  await fetch(`${process.env.API_BASE_URL}/userScores/scoreTracking`, options);
 
 }
 

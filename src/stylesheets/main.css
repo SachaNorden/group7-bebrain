@@ -302,16 +302,22 @@ body {
 
 
 #cardProfil {
-    margin-top: 8em;
+    padding-top: 0.5em;
 	color:#fff;
     width: 350px;
     border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     background: linear-gradient(145deg, #9a40a9, #b74cc9);
     box-shadow:  20px 20px 60px #913ca0, 
                 -20px -20px 60px #c552d8;
     border: none;
 
 }
+
+                
 
 
 /* MemoryGame */

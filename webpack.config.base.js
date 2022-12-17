@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-const DEVELOPMENT_API_BASE_URL = 'https://api-bebrain.azurewebsites.net';
+const DEVELOPMENT_API_BASE_URL = '/api';
 const PRODUCTION_API_BASE_URL = 'https://api-bebrain.azurewebsites.net';
 const DEVELOPMENT_PATH_PREFIX = '/';
 const PRODUCTION_PATH_PREFIX = '/group7-bebrain.github.io/';

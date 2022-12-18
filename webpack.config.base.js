@@ -9,6 +9,11 @@ const PRODUCTION_API_BASE_URL = 'https://api-bebrain.azurewebsites.net/';
 const DEVELOPMENT_PATH_PREFIX = '/';
 const PRODUCTION_PATH_PREFIX = '/group7-bebrain.github.io/';
 
+const buildMode = process.argv[process.argv.indexOf('--mode') + 1];
+const isProductionBuild = buildMode === 'production';
+const API_BASE_URL = isProductionBuild ? PRODUCTION_API_BASE_URL : DEVELOPMENT_API_BASE_URL;
+const PATH_PREFIX = isProductionBuild ? PRODUCTION_PATH_PREFIX : DEVELOPMENT_PATH_PREFIX;
+
 module.exports = {
   mode: 'none',
   entry: './src/index.js',

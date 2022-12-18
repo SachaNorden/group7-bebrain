@@ -90,7 +90,6 @@ class GameScene extends Phaser.Scene {
 
 async function saveScore(score){
   const user = getAuthenticatedUser();
-
   const options = {
       method: 'PATCH',
       body: JSON.stringify({

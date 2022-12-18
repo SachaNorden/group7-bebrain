@@ -178,7 +178,6 @@ function Finish() {
 
 async function saveScore(score){
     const user = getAuthenticatedUser();
-
     const options = {
         method: 'PATCH',
         body: JSON.stringify({

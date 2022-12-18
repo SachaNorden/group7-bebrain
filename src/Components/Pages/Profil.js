@@ -70,23 +70,14 @@ async function renderProfilForm() {
   game1.appendChild(title1);
   const num1 = document.createElement('span');
   num1.className = 'num';
-  num1.textContent = scores.scoreReflexe;
+  if(scores.scoreReflexe === 9999){
+    num1.textContent = 'No score';
+  } else{
+    num1.textContent = scores.scoreReflexe;
+  }
   game1.appendChild(num1);
   row.appendChild(game1);
 
-  const game2 = document.createElement('div');
-  game2.className = 'col-md-6 resultGame';
-  const title2 = document.createElement('h5');
-  title2.textContent = 'Fast Click Game';
-  game2.appendChild(title2);
-  const num2 = document.createElement('span');
-  num2.className = 'num';
-  num2.textContent = scores.scoreFastClick;
-  game2.appendChild(num2);
-  row.appendChild(game2);
-
-  const space1 = document.createElement('hr');
-  row.appendChild(space1);
 
   const game3 = document.createElement('div');
   game3.className = 'col-md-6 resultGame';
@@ -95,9 +86,14 @@ async function renderProfilForm() {
   game3.appendChild(title3);
   const num3 = document.createElement('span');
   num3.className = 'num';
-  num3.textContent = scores.scoreMemory;
+  if(scores.scoreMemory === 9999){
+    num3.textContent = 'No score';
+  } else{
+    num3.textContent = scores.scoreMemory;
+  }
   game3.appendChild(num3);
   row.appendChild(game3);
+
 
   const game4 = document.createElement('div');
   game4.className = 'col-md-6 resultGame';
@@ -106,10 +102,31 @@ async function renderProfilForm() {
   game4.appendChild(title4);
   const num4 = document.createElement('span');
   num4.className = 'num';
-  const trackingScore = scores.scoreTracking;
-  num4.textContent = trackingScore;
+  if(scores.scoreTracking === -9999){
+    num4.textContent = 'No score';
+  } else{
+    num4.textContent = scores.scoreTracking;
+  }
   game4.appendChild(num4);
   row.appendChild(game4);
+
+  const game2 = document.createElement('div');
+  game2.className = 'col-md-6 resultGame';
+  const title2 = document.createElement('h5');
+  title2.textContent = 'Fast Click Game';
+  game2.appendChild(title2);
+  const num2 = document.createElement('span');
+  num2.className = 'num';
+  if(scores.scoreFastClick === 0){
+    num2.textContent = 'No score';
+  } else{
+    num2.textContent = scores.scoreFastClick;
+  }
+  game2.appendChild(num2);
+  row.appendChild(game2);
+
+  const space1 = document.createElement('hr');
+  row.appendChild(space1);
 
   text.appendChild(row);
   main.appendChild(container);

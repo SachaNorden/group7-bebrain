@@ -26,7 +26,7 @@ function renderPage() {
             </div>
             <div id=secondGame data-uri="/memory">
             </div>
-            <div id=thirdGame data-uri="trackingGame">
+            <div id=thirdGame data-uri="/trackingGame">
             </div>
             <div id=lastGame data-uri="/fastClick">
             </div>

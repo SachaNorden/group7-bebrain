@@ -4,15 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-const DEVELOPMENT_API_BASE_URL = 'http://localhost:3000';
-const PRODUCTION_API_BASE_URL = 'http://web2-2022-project-group-07-bebrain.io';
+const DEVELOPMENT_API_BASE_URL = 'http://localhost:3000/';
+const PRODUCTION_API_BASE_URL = 'https://api-bebrain.azurewebsites.net/';
 const DEVELOPMENT_PATH_PREFIX = '/';
 const PRODUCTION_PATH_PREFIX = '/group7-bebrain.github.io/';
-
-const buildMode = process.argv[process.argv.indexOf('--mode') + 1];
-const isProductionBuild = buildMode === 'production';
-const API_BASE_URL = isProductionBuild ? PRODUCTION_API_BASE_URL : DEVELOPMENT_API_BASE_URL;
-const PATH_PREFIX = isProductionBuild ? PRODUCTION_PATH_PREFIX : DEVELOPMENT_PATH_PREFIX;
 
 module.exports = {
   mode: 'none',
